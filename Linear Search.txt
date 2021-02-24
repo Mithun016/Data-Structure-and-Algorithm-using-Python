@@ -1,0 +1,15 @@
+def linear_search(List, searched_item):
+    for i in range(len(List)):
+        if List[i] == searched_item:
+            return print("Found")
+    return print("Not Found")
+
+List = []
+Amount = int(input("Enter the amount you want to input in the list: "))
+print("Numbers are: ")
+for i in range(Amount):
+    numbers = int(input(" "))
+    List.append((numbers))
+searched_item = int(input("Enter your searched_item: "))
+
+linear_search(List,searched_item)
