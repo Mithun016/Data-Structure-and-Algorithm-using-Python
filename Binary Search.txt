@@ -1,0 +1,24 @@
+#Binary Search:
+
+def binary_search(List, searched_item):
+    low = 0
+    high = len(List) - 1
+    while low <= high:
+        mid = (low+high)//2
+        if List[mid] == searched_item:
+            return print("Found")
+        if List[mid] < searched_item:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return print("Not Found")
+
+List = []
+Amount = int(input("Enter the amount you want to input in the list: "))
+print("Numbers are: ")
+for i in range(Amount):
+    numbers = int(input(" "))
+    List.append((numbers))
+searched_item = int(input("Enter your searched_item: "))
+
+binary_search(List,searched_item)
