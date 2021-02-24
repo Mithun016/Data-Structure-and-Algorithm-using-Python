@@ -1,0 +1,9 @@
+#Input numbers in a List from the user:
+
+List = []
+Amount = int(input("Enter the amount you want to input in the list: "))
+print("Numbers are: ")
+for i in range(Amount):
+    numbers = int(input(" "))
+    List.append((numbers))
+print(List)
