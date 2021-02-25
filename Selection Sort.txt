@@ -1,0 +1,25 @@
+#Selction_Sort:
+
+def selection_sort(List):
+    for start in range(len(List) - 1):
+        minimum_position = start
+        for start_next in range(start+1,len(List)):
+            if List[start_next] < List[minimum_position]:
+                minimum_position = start_next
+
+        temp = List[start]
+        List[start] = List[minimum_position]
+        List[minimum_position] = temp
+    return List
+
+List = []
+Amount = int(input("Enter the amount you want to input in the list: "))
+print("Numbers are: ")
+for i in range(Amount):
+    numbers = int(input(" "))
+    List.append((numbers))
+print(List)
+
+print("Sorted List using selectioin sort: ")
+
+print(selection_sort(List))
